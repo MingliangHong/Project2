@@ -11,10 +11,10 @@ function App() {
         <Navbar/>
         <div className='content'>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="#/">
               <Home />
             </Route>
-            <Route exact path="/detailpage">
+            <Route exact path="#/detailpage">
               <Detailpage />
             </Route>
           </Switch>
