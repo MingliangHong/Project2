@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Detailpage from './Detailpage';
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <div className="App">
         <Navbar/>
         <div className='content'>
@@ -20,7 +20,7 @@ function App() {
           </Switch>
         </div>
       </div>
-    </HashRouter>
+    </Router>
   );
 }
 
