@@ -6,11 +6,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Detailpage from './Detailpage';
 function App() {
   return (
-    <Router>
+    // <Router>
       <div className="App">
         <Navbar/>
         <Home></Home>
-        <div className='content'>
+        {/* <div className='content'>
           <Switch>
             <Route exact path="/">
               <Home />
@@ -19,9 +19,9 @@ function App() {
               <Detailpage />
             </Route>
           </Switch>
-        </div>
+        </div> */}
       </div>
-    </Router>
+    // </Router>
   );
 }
 
