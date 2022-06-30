@@ -2,6 +2,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import Slickp from './Slickp';
 import Slickv from './Slickv';
 import Userreview from './Userreview';
+import Navbar from './Navbar';
 const reviewlist = [
     { title:<Userreview></Userreview>},
     { title:<Userreview></Userreview>},
@@ -14,6 +15,7 @@ const reviewlist = [
 const Detailpage = () => {
     return (
         <div className="detailpage">
+            <Navbar/>
             <Container>
                 <Row>
                     <Col md={7} className="dleft">
