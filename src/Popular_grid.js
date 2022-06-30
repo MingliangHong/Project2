@@ -1,4 +1,3 @@
-import { border } from '@mui/system';
 import { Container, Row, Col } from 'react-grid-system';
 import Name_score from './Name_score';
 const movielist = [

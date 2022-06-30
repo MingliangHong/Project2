@@ -49,7 +49,6 @@
 }
 .home {
   background-color: white;
-  border: black 1px ;
   padding: 30px;
   max-width:1200px;
   margin: 0 auto;
@@ -91,4 +90,82 @@
   border-left:solid 2px;
   border-right:solid 2px;
   border-radius: 10px;
+}
+.detailpage{
+  background-color: white;
+  padding: 30px;
+  max-width:1200px;
+  margin: 0 auto;
+  height:max-content;
+}
+.dleft{
+  text-align: left;
+}
+.dleftin{
+  margin-top: 10px;
+}
+.detailin{
+  margin-top: 20px;
+}
+.dright{
+}
+.scoregroup{
+  display: flex;
+  margin-left: 70px;
+  height: 70px;
+  padding: 10px;
+  text-align: center;
+}
+.scoreword{
+  text-align: center;
+  margin-top: 20px;
+  width: 100px;
+}
+.score{
+  margin-left: 20px;
+  padding: 20px;
+  height: 30px;
+  width: 40px;
+  border-radius: 50%;
+  background-color:#F33D3D;
+  color: white;
+}
+.ratebox{
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+}
+.review{
+  text-align: left;
+  margin-top: 40px;
+  font-size: 20px;
+}
+.reviewscore{
+  font-size:30px;
+  color: red;
+}
+.comment{
+  margin-top: 20px;
+  width: 400px;
+  height: 200px;
+}
+.detailhead {
+  margin-top: 20px;
+  max-width: 1300px;
+  text-align: left;
+  border-top:solid 2px #002357;
+}
+.userreview{
+  padding: 10px;
+  font-size: 20px;
+  margin-left: 5px;
+  text-align: left;
+  border-bottom: solid 1px;
+}
+.name_rate{
+  display: flex;
+  margin-top: 10px;
+}
+.nick-name{
+  margin-right: 50px;
 }
