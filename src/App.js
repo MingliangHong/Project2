@@ -7,9 +7,10 @@ import Navbar from './Navbar';
 function App() {
   return (
     <BrowserRouter>
+      <Navbar></Navbar>
       <Routes>
-          <Route path="/" element={<><Navbar></Navbar> <Home></Home></>}></Route>
-          <Route path='/detailpage' element={<><Navbar></Navbar><Detailpage></Detailpage></>}></Route>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path='/detailpage' element={<Detailpage></Detailpage> }></Route>
       </Routes>
     </BrowserRouter>
   );
