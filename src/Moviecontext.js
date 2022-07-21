@@ -14,6 +14,8 @@ const Moviecontext = createContext({
     fetchNowPlaying:()=>{},
     fetchTopRated:()=>{},
     setLang:()=>{},
+    fetchunPopular:()=>{},
+    fetchlowRated:()=>{}
 });
 export function MovieProvider({ children }) {
     const [movies, setMovies] = useState([]);
@@ -24,13 +26,24 @@ export function MovieProvider({ children }) {
 
     const fetchPopular = async () => {
       const data = await fetch(
-        `https://api.themoviedb.org/3/movie/popular?api_key=1ebbd41194eda75f56723678e6ba5aaf&language=${t("lang")}-US&page=1`
+        `https://api.themoviedb.org/3/discover/movie?api_key=1ebbd41194eda75f56723678e6ba5aaf&language=${t("lang")}-US&sort_by=popularity.desc&page=1&with_watch_monetization_types=flatrate`
       );
       const result = await data.json();
       setMovies(result.results);
       setFiltered(result.results);
       setActiveGenre(0);
       setActiveSort("Popular");
+    };
+
+    const fetchunPopular = async () => {
+      const data = await fetch(
+        `https://api.themoviedb.org/3/discover/movie?api_key=1ebbd41194eda75f56723678e6ba5aaf&language=${t("lang")}-US&sort_by=popularity.asc&page=1&with_watch_monetization_types=flatrate`
+      );
+      const result = await data.json();
+      setMovies(result.results);
+      setFiltered(result.results);
+      setActiveGenre(0);
+      setActiveSort("unPopular");
     };
   
     const fetchNowPlaying = async () => {
@@ -53,6 +66,16 @@ export function MovieProvider({ children }) {
       setFiltered(movies.results);
       setActiveGenre(0);
       setActiveSort("Rate");
+    };
+    const fetchlowRated = async () => {
+      const data = await fetch(
+        `https://api.themoviedb.org/3/discover/movie?api_key=1ebbd41194eda75f56723678e6ba5aaf&language=${t("lang")}-US&sort_by=vote_average.asc&page=1&with_watch_monetization_types=flatrate`
+      );
+      const result = await data.json();
+      setMovies(result.results);
+      setFiltered(result.results);
+      setActiveGenre(0);
+      setActiveSort("Popular");
     };
     
     const fetchSearch = async (query) => {
@@ -78,6 +101,8 @@ export function MovieProvider({ children }) {
             fetchSearch,
             fetchNowPlaying,
             fetchTopRated,
+            fetchlowRated,
+            fetchunPopular
         }}
       >
         { children }

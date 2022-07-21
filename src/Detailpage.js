@@ -30,6 +30,7 @@ const Detailpage = (props) => {
         .then(data => {
             setDetail(data)
             setGenres(data.genres)
+            console.log(data)
         })
     },[t])
     const [director, setDirector] = useState("");

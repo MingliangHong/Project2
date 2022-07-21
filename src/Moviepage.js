@@ -16,6 +16,8 @@ const Moviepage = () => {
         fetchNowPlaying,
         fetchPopular,
         setActiveGenre,
+        fetchunPopular,
+        fetchlowRated
     } = useContext(Moviecontext);
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=1ebbd41194eda75f56723678e6ba5aaf&language=${t("lang")}-US`)
@@ -34,7 +36,12 @@ const Moviepage = () => {
                     <button 
                     className="button"
                     onClick={() => fetchPopular()}>
-                        {t("Popular")}
+                        {t("Popular desc")}
+                    </button>
+                    <button 
+                    className="button"
+                    onClick={() => fetchunPopular()}>
+                        {t("Popular asc")}
                     </button>
                     <button 
                     className="button"
@@ -44,15 +51,44 @@ const Moviepage = () => {
                     <button 
                     className="button"
                     onClick={() => fetchTopRated()}>
-                        {t("Top rated")}
+                        {t("Vote desc")}
+                    </button>
+                    <button 
+                    className="button"
+                    onClick={() => fetchlowRated()}>
+                        {t("Vote asc")}
                     </button>
                 </div>
                 <h2>{t("Category")}</h2>
                 <Moviefilter></Moviefilter>
+                <h2>{t("Rate")}</h2>
+                <div>
+                    <button 
+                    className="button">
+                        {t("G")}
+                    </button>
+                    <button 
+                    className="button">
+                        {t("PG")}
+                    </button>
+                    <button 
+                    className="button">
+                        {t("PG-13")}
+                    </button>
+                    <button 
+                    className="button">
+                        {t("R")}
+                    </button>
+                    <button 
+                    className="button">
+                        {t("NC-17")}
+                    </button>
+                </div>
                 <div className="gridView">
                     {filtered.map((each)=>
                     <Each key= {each.id}{...each}></Each>)}
                 </div>
+                
             </div>
     );
 }

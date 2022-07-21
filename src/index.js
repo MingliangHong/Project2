@@ -89,7 +89,11 @@ i18n
           "Music":"音乐",
           "Romance":"爱情",
           "Science Fiction":"科幻",
-          "War":"战争"
+          "War":"战争",
+          "Popular desc":"最流行",
+          "Popular asc":"最不流行",
+          "Vote desc":"评分最高",
+          "Vote asc":"评分最低",
         }
       }
     },
